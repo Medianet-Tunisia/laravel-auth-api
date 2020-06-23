@@ -10,7 +10,7 @@ class RegistrationTest extends TestCase
     public function try_to_successfully_register()
     {
         $response = $this->postJson('api/v1/register', [
-            'name' => $this->faker->name,
+            'name' => 'test -'.$this->faker->firstName,
             'email' => $this->faker->safeEmail,
             'password' => 'password',
             'c_password' => 'password',
@@ -23,7 +23,7 @@ class RegistrationTest extends TestCase
     public function try_to_successfully_register_using_social()
     {
         $response = $this->postJson('api/v1/login/social', [
-            'name' => $this->faker->name,
+            'name' => 'test -'.$this->faker->firstName,
             'provider_name' => 'facebook',
             'provider_id' => $this->faker->randomNumber(),
             'email' => $this->faker->safeEmail,
