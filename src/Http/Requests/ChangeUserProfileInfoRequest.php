@@ -4,7 +4,6 @@ namespace MedianetDev\LaravelAuthApi\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 
 class ChangeUserProfileInfoRequest extends FormRequest
 {
@@ -29,7 +28,7 @@ class ChangeUserProfileInfoRequest extends FormRequest
 
         return [
             'name'     => 'required|min:6',
-            'email'    => 'required|email|unique:'.(new $user)->getTable().',email,'. Auth::id(),
+            'email'    => 'required|email|unique:'.(new $user)->getTable().',email,'.Auth::id(),
         ];
     }
 }

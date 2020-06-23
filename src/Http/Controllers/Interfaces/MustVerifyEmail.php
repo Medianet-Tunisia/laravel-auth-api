@@ -32,4 +32,3 @@ interface MustVerifyEmail
      */
     public function getEmailForVerification();
 }
-

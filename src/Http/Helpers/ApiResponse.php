@@ -12,7 +12,7 @@ class ApiResponse
     private $data;
 
     /**
-     * @var boolean
+     * @var bool
      */
     private $status;
 

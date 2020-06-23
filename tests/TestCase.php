@@ -10,7 +10,7 @@ use Orchestra\Testbench\TestCase as TestbenchTestCase;
 class TestCase extends TestbenchTestCase
 {
     /**
-     * Faker instance
+     * Faker instance.
      *
      * @var \Faker\Generator
      */

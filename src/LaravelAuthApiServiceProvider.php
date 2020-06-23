@@ -4,10 +4,8 @@ namespace MedianetDev\LaravelAuthApi;
 
 use Illuminate\Support\ServiceProvider;
 
-
 class LaravelAuthApiServiceProvider extends ServiceProvider
 {
-
     protected $commands = [
         \MedianetDev\LaravelAuthApi\Console\Commands\PublishApiUserModel::class,
     ];
@@ -106,5 +104,4 @@ class LaravelAuthApiServiceProvider extends ServiceProvider
             ],
         ];
     }
-
 }

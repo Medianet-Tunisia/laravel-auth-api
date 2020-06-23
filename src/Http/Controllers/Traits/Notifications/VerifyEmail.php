@@ -34,15 +34,14 @@ class VerifyEmail extends Notification
      */
     public function toMail($notifiable)
     {
-
         if (static::$toMailCallback) {
             return call_user_func(static::$toMailCallback, $notifiable);
         }
 
         return (new MailMessage)
-            ->subject(Lang::get('Verify Email Address ['.hexdec( substr(sha1($notifiable->getKey() . $notifiable->getEmailForVerification()), 0, 3) ).']'))
+            ->subject(Lang::get('Verify Email Address ['.hexdec(substr(sha1($notifiable->getKey().$notifiable->getEmailForVerification()), 0, 3)).']'))
             ->line(Lang::get('MedianetDev\LaravelAuthApi\Notifications\VerifyEmail.php '))
-            ->action(Lang::get(hexdec( substr(sha1($notifiable->getKey() . $notifiable->getEmailForVerification()), 0, 3) )), '')
+            ->action(Lang::get(hexdec(substr(sha1($notifiable->getKey().$notifiable->getEmailForVerification()), 0, 3))), '')
             ->line(Lang::get('If you did not create an account, no further action is required.'));
     }
 

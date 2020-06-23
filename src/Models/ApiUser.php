@@ -2,10 +2,10 @@
 
 namespace MedianetDev\LaravelAuthApi\Models;
 
-use MedianetDev\LaravelAuthApi\Http\Controllers\Interfaces\MustVerifyEmail;
-use MedianetDev\LaravelAuthApi\Models\User as Authenticatable;
-use MedianetDev\LaravelAuthApi\Models\Traits\InheritsRelationsFromParentModel;
 use Laravel\Passport\HasApiTokens;
+use MedianetDev\LaravelAuthApi\Http\Controllers\Interfaces\MustVerifyEmail;
+use MedianetDev\LaravelAuthApi\Models\Traits\InheritsRelationsFromParentModel;
+use MedianetDev\LaravelAuthApi\Models\User as Authenticatable;
 
 class ApiUser extends Authenticatable implements MustVerifyEmail
 {
@@ -26,7 +26,7 @@ class ApiUser extends Authenticatable implements MustVerifyEmail
 
     /**
      * The attributes that should be cast to native types.
-     * lslsls
+     * lslsls.
      * @var array
      */
     protected $casts = [

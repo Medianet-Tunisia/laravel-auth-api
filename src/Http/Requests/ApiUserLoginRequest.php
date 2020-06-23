@@ -38,5 +38,4 @@ class ApiUserLoginRequest extends FormRequest
     {
         return [];
     }
-
 }

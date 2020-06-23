@@ -41,7 +41,7 @@ class ApiUserRegisterRequest extends FormRequest
     public function messages()
     {
         return [
-            /*'name.required' => '',
+        /*'name.required' => '',
             'name.min' => '',
             'name.max' => '',
             'email.required' => '',

@@ -37,7 +37,7 @@ class PublishApiUserModel extends GeneratorCommand
      */
     public function handle()
     {
-        \Artisan::call('vendor:publish', array('--provider' => 'MedianetDev\LaravelAuthApi\LaravelAuthApiServiceProvider', '--tag' => 'config'));
+        \Artisan::call('vendor:publish', ['--provider' => 'MedianetDev\LaravelAuthApi\LaravelAuthApiServiceProvider', '--tag' => 'config']);
 
         $this->question('Uncomment  the user_model_fqn in your laravel-auth-api.php config file to set your current active User Model to the one just created.');
 
